@@ -7,3 +7,9 @@ variable "aws_region" {
   type        = string
   default     = "us-east-1"
 }
+
+variable "log_level" {
+  description = "The log level or higher that will be output from the Lambda functions"
+  type        = string
+  default     = "INFO"
+}

@@ -66,6 +66,7 @@ resource "aws_lambda_function" "rest_api_lambda" {
 
   environment {
     variables = {
+      LOG_LEVEL = var.log_level
       DYNAMODB_TABLE = aws_dynamodb_table.data_table.name
     }
   }
@@ -112,6 +113,7 @@ resource "aws_lambda_function" "web_app_lambda" {
 
   environment {
     variables = {
+      LOG_LEVEL = var.log_level
       FETCH_API_URL = aws_lambda_function_url.rest_api_url.function_url
     }
   }
