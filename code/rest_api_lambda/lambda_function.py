@@ -18,14 +18,15 @@ def lambda_handler(event, context):
         )
 
         if "Item" not in response:
-            print("Item not found!")  # Ingen info om vilket ID som saknas
+            print(f"[404] Item '{item_id}' not found!")
             return {"statusCode": 404, "body": "Item not found"}
 
+        print(f"[200] Item '{item_id}' found! Value: {response["Item"]["data"]}")
         return {
             "statusCode": 200,
             "body": response["Item"]["data"]
         }
     
     except Exception as e:
-        print("Something went wrong!")  # Ingen detaljerad felhantering
+        print(f"[500] Exception caught {e}")
         return {"statusCode": 500, "body": "Internal Server Error"}
