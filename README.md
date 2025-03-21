@@ -48,6 +48,11 @@ Efter att infrastrukturen har skapats, följ dessa steg:
    - Granska källkoden för att se hur loggningen är implementerad.
    - Fundera över hur loggningen kan förbättras för att underlätta felsökning.
 
+## Exempel på förbättringar
+
+När du själv har funderat och experimenterat med förbättrad loggning kan du ta ett kik på hur jag gjort:
+- [branch Improvement](https://github.com/khdev-devops/infra-mar20-logging/tree/improvement)
+
 ## Rensa upp resurser
 
 När du är klar med övningen, se till att ta bort de resurser som skapats för att undvika onödiga kostnader:
@@ -56,3 +61,7 @@ När du är klar med övningen, se till att ta bort de resurser som skapats för
    ```bash
    tofu destroy
    ```
+
+## Hittade du felet?
+
+Hint: ta ett kik [här](https://github.com/khdev-devops/infra-mar20-logging/blob/main/main.tf#L30).
